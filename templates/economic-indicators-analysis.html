@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Real Estate Analytics--Understanding Real Estate Markets Through Data Analytics">
+  <meta name="author" content="Cheryl Sellers Johnson">
+
+  <title>Real Estate Analytics</title>
+  
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/real-estate-analytics.css" rel="stylesheet">
+
+  <!--  Import the d3 framework  -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+ 
+  <!-- Import plotly library to create charts & graphs  -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Real Estate Data Analytics</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+      <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="../Resources/real-estate-analytics-img.jpg" alt="Real Estate Analtyics">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <h1 class="font-weight-light">Real Estate Data Analytics</h1>
+        <p>Understanding Real Estate Markets through Data Analytics.</p>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <!-- <div class="card h-100"> -->
+        <div class="card text-white bg-info mb-5">
+          <div class="card-body">
+            <h2 class="card-title">Analysis of Economic Factors Affecting Real Estate</h2>
+            <p class="card-text">Identification and Hypothesis Testing of Economic Factors that May Affect the Real Estate Markets.</p>
+          </div>
+          <div class="card-footer">
+            <a href="" class="btn btn-primary btn-sm">Current Presentation</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Real Estate Market Data Model</h2>
+            <p class="card-text">Development of the Real Estate Market Predictions Model.</p>
+          </div>
+          <div class="card-footer">
+            <a href="real-estate-data-model.html" class="btn btn-primary btn-sm">Presentation & Charts</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Real Estate Market Predictions</h2>
+            <p class="card-text">Predicting Changes to Real Estate Markets as Economic Indicators Change.</p>
+          </div>
+          <div class="card-footer">
+            <a href="real-estate-predictions.html" class="btn btn-primary btn-sm">Presentation & Charts</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+
+    </div>
+    <!-- /.row -->
+
+    
+    <div class="card">
+      <div class="card-header"></div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>To analyze the strength of the real estate market, we will classify the market into a <b>Buyer’s Market</b>, a <b>Seller’s Market</b>, and a <b>Balanced Market</b>.<br><br>
+            In a <b>Buyer’s Market</b>, the supply of homes (available homes for sale) exceeds the demand for homes (the number of buyers seeking to purchase homes). A <b>Buyer’s Market</b> is one in which there are more than 6 months of housing inventory.<br><br>
+            In a <b>Seller’s Market</b>, the demand for homes (the number of buyers seeking to purchase homes) exceeds the available supply of homes on the market. A <b>Seller’s Market</b> is one in which there are fewer than 4 months of housing inventory.<br><br>
+            In a <b>Balanced Market</b>, the demand for homes (the number of buyers seeking to purchase homes) is nearly equal to the available supply of homes on the market.  A <b>Balanced Market</b> is one in which there are 4-6 months of housing inventory.<br><br>
+            The supply of homes is also known as the absorption rate and is indicated using the Months of Supply of Inventory.<br><br>
+            The chart below shows the months of supply in the real estate markets since 2012.</p>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Content Row -->
+   <div class="row">
+    <div class="col-md-12 mb-5">
+      <!-- Real Estate Markets - Months of Supply Since 2012  -->
+      <div id="real-estate-supply-line-plot"></div>
+      <!-- script src="../static/js/realestaterecords.js"></script> -->
+      <!-- script src="../static/js/real-estate-plot-historical.js"></script> -->
+      <footer class="blockquote-footer">Data provided by Redfin, a national real estate brokerage.</footer>
+     </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header"></div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>Several Economic Factors affect the real estate markets.<br><br>
+          The fist Economic Factor is Unemployment Rate.  The Chart below shows the national Unemployment Rate since 2010.</p>
+        </blockquote>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-10 mb-5">
+        <!-- Unemployment Rate Historical Chart -->
+        <div id="unemployment-all-bar-plot"></div>
+        <script src="../static/js/employmentrecords.js"></script>
+        <script src="../static/js/unemployment-plot-historical.js"></script>
+        <footer class="blockquote-footer">Data provided by United States Bureau of Labor Statistics.</footer>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header"></div>
+        <div class="card-body">
+          <blockquote class="blockquote mb-0">
+            <p>Comment on Unemployment Rate and Real Estate Market.</p>
+          </blockquote>
+        </div>
+      </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+</body>
+
+</html>

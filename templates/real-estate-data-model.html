@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Real Estate Analytics--Understanding Real Estate Markets Through Data Analytics">
+  <meta name="author" content="Cheryl Sellers Johnson">
+
+  <title>Real Estate Analytics</title>
+  
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/real-estate-analytics.css" rel="stylesheet">
+
+  <!--  Import the d3 framework  -->
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.9.7/d3.min.js"></script>
+ 
+  <!-- Import plotly library to create charts & graphs  -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Real Estate Data Analytics</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <!-- Heading Row -->
+    <div class="row align-items-center my-5">
+      <div class="col-lg-7">
+        <img class="img-fluid rounded mb-4 mb-lg-0" src="../Resources/real-estate-analytics-img.jpg" alt="Real Estate Analtyics">
+      </div>
+      <!-- /.col-lg-8 -->
+      <div class="col-lg-5">
+        <h1 class="font-weight-light">Real Estate Data Analytics</h1>
+        <p>Understanding Real Estate Markets through Data Analytics.</p>
+      </div>
+      <!-- /.col-md-4 -->
+    </div>
+    <!-- /.row -->
+
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Analysis of Economic Factors Affecting Real Estate</h2>
+            <p class="card-text">Identification and Hypothesis Testing of Economic Factors that May Affect the Real Estate Markets.</p>
+          </div>
+          <div class="card-footer">
+            <a href="economic-indicators-analysis.html" class="btn btn-primary btn-sm">Presentation & Charts</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <!-- <div class="card h-100"> -->
+          <div class="card text-white bg-info mb-5">
+            <div class="card-body">
+              <h2 class="card-title">Real Estate Market Data Model</h2>
+              <p class="card-text">Development of the Real Estate Market Predictions Model.</p>
+            </div>
+          <div class="card-footer">
+            <a href="" class="btn btn-primary btn-sm">Current Presentation</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <div class="card-body">
+            <h2 class="card-title">Real Estate Market Predictions</h2>
+            <p class="card-text">Predicting Changes to Real Estate Markets as Economic Indicators Change.</p>
+          </div>
+          <div class="card-footer">
+            <a href="real-estate-predictions.html" class="btn btn-primary btn-sm">Presentation & Charts</a>
+          </div>
+        </div>
+      </div>
+      <!-- /.col-md-4 -->
+
+    </div>
+    <!-- /.row -->
+
+    <div class="card">
+      <div class="card-header"></div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>In late January 2020, the COVID-19 Coronavirus pandemic hit; and it was spreading in communities by February 2020. In response to rising COVID rates, the federal government issued a national state of emergency and the states began implementing Stay-at-Home orders.
+          </p>
+        </blockquote>
+      </div>
+    </div>
+
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-12 mb-5">
+        <!-- COVID Stay-at-Home Orders by State  -->
+        <div id="covid-by-state-line-plot"></div>
+        <script src="../static/js/covidrecords.js"></script>
+        <script src="../static/js/covid-plot-by-state.js"></script>
+        <footer class="blockquote-footer">Data provided by United States Department of Health & Human Services.</footer>
+       </div>
+   </div>
+
+   <div class="card">
+    <div class="card-header"></div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>These Stay-at-Home Orders required residents to stay home, except to engage in essential functions, such as shopping for groceries. Essential businesses were exempt from these orders.<br><br>
+        Some real estate services were considered essential businesses and theoretically could continue to operate. Individuals, however, were not permitted to leave their houses and home sellers did not want strangers in their homes.<br><br>
+        This resulted in sellers pulling their homes off the market and buyers staying home instead of shopping for homes.</p>
+      </blockquote>
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-12 mb-5">
+        <!-- Real Estate Chart 2020  -->
+        <div id="real-estate-2020-line-plot"></div>
+        <script src="../static/js/realestaterecords.js"></script>
+        <script src="../static/js/real-estate-plot-2020.js"></script>
+        <footer class="blockquote-footer">Data provided by Redfin, a national real estate brokerage.</footer>
+       </div>
+   </div>
+
+   <div class="card">
+    <div class="card-header"></div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>The Real Estate markets crashed in April and May 2020.  In June, however, they came roaring back!<br><br>
+        This dramatic and sudden resurgence can be attributed to the states lifting their Stay-at-Home Orders, most of which were lifted in May.</p>
+      </blockquote>
+    </div>
+  </div>
+
+    <!-- Content Row -->
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <!-- Blank column  -->
+       </div>
+      <div class="col-md-8 mb-5">
+        <!-- COVID Stay-at-Home Orders by Month  -->
+        <div id="covid-by-month-bar-plot"></div>
+        <script src="../static/js/covidrecords.js"></script>
+        <script src="../static/js/covid-plot-by-month.js"></script>
+        <footer class="blockquote-footer">Data provided by United States Department of Health & Human Services.</footer>
+       </div>
+   </div>
+
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+</body>
+
+</html>
