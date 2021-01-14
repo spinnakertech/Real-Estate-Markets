@@ -119,67 +119,57 @@
       <div class="card-header"></div>
       <div class="card-body">
         <blockquote class="blockquote mb-0">
-          <p>In late January 2020, the COVID-19 Coronavirus pandemic hit; and it was spreading in communities by February 2020. In response to rising COVID rates, the federal government issued a national state of emergency and the states began implementing Stay-at-Home orders.
+          <p>We developed a machine learning model using the five economic indicators that we highlighted on the previous page, namely:<br>
+            <li>Unemployment Rate</li>
+            <li>Average Hourly Wages</li>
+            <li>Mortgage Intererst Rates</li>
+            <li>House Price Index</li>
+            <li>Gross Domestic Product (an indicator of the strength of the economy)</li>
+            <br><br>
+            We then tracked the "strength" of the real estate market over a time series for each month.
+            The strength of the market indicates whether the market is a <b>Buyer’s Market</b> (more than 5 months of housing inventory), a <b>Seller’s Market</b> (fewer than 3 months of housing inventory), or a <b>Balanced Market</b> (3-5 months of housing inventory).<br><br>
+            The supply of homes is also known as the absorption rate and is indicated using the Months of Supply of Housing Inventory.<br><br>
           </p>
+          The data that we used to train and test our machine model is below.<br>
+          <!-- iframe src="../data/machinelearningdata-display.pdf" width="100%" height="500px"> -->
         </blockquote>
       </div>
     </div>
 
+        <!-- Content Row -->
+        <div class="row">
+          <div class="col-md-12 mb-5">
+            <!-- Machine Learning Model  -->
+            <div id="machine-learning-model"></div>
+
+           </div>
+       </div>
+
     <!-- Content Row -->
     <div class="row">
-      <div class="col-md-12 mb-5">
-        <!-- COVID Stay-at-Home Orders by State  -->
-        <div id="covid-by-state-line-plot"></div>
-        <script src="../static/js/covidrecords.js"></script>
-        <script src="../static/js/covid-plot-by-state.js"></script>
-        <footer class="blockquote-footer">Data provided by United States Department of Health & Human Services.</footer>
-       </div>
-   </div>
+   <div class="card">
+    <div class="card-header"></div>
+    <div class="card-body">
+      <blockquote class="blockquote mb-0">
+        <p>After we ran our model, we visualized the training and testing data.</p>
+        <div class="col-lg-7">
+          <img src="../data/train-test-plot.png" alt="Real Estate Analtyics-Train/Test Plot">
+        </div>
+
+      </blockquote>
+    </div>
+  </div>
+
 
    <div class="card">
     <div class="card-header"></div>
     <div class="card-body">
       <blockquote class="blockquote mb-0">
-        <p>These Stay-at-Home Orders required residents to stay home, except to engage in essential functions, such as shopping for groceries. Essential businesses were exempt from these orders.<br><br>
-        Some real estate services were considered essential businesses and theoretically could continue to operate. Individuals, however, were not permitted to leave their houses and home sellers did not want strangers in their homes.<br><br>
-        This resulted in sellers pulling their homes off the market and buyers staying home instead of shopping for homes.</p>
+        <p>Our Model Score (R-squared) is:<br><br>
+        <h1>92%</h1></p>
       </blockquote>
     </div>
   </div>
-
-  <div class="row">
-      <div class="col-md-12 mb-5">
-        <!-- Real Estate Chart 2020  -->
-        <div id="real-estate-2020-line-plot"></div>
-        <script src="../static/js/realestaterecords.js"></script>
-        <script src="../static/js/real-estate-plot-2020.js"></script>
-        <footer class="blockquote-footer">Data provided by Redfin, a national real estate brokerage.</footer>
-       </div>
-   </div>
-
-   <div class="card">
-    <div class="card-header"></div>
-    <div class="card-body">
-      <blockquote class="blockquote mb-0">
-        <p>The Real Estate markets crashed in April and May 2020.  In June, however, they came roaring back!<br><br>
-        This dramatic and sudden resurgence can be attributed to the states lifting their Stay-at-Home Orders, most of which were lifted in May.</p>
-      </blockquote>
-    </div>
-  </div>
-
-    <!-- Content Row -->
-    <div class="row">
-      <div class="col-md-8 mb-5">
-        <!-- Blank column  -->
-       </div>
-      <div class="col-md-8 mb-5">
-        <!-- COVID Stay-at-Home Orders by Month  -->
-        <div id="covid-by-month-bar-plot"></div>
-        <script src="../static/js/covidrecords.js"></script>
-        <script src="../static/js/covid-plot-by-month.js"></script>
-        <footer class="blockquote-footer">Data provided by United States Department of Health & Human Services.</footer>
-       </div>
-   </div>
 
 
   </div>
@@ -188,7 +178,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; 2020</p>
+      <p class="m-0 text-center text-white">Copyright &copy; 2021</p>
     </div>
     <!-- /.container -->
   </footer>
